@@ -74,6 +74,7 @@ body {
     outline: none;
     cursor: pointer;
     background-color: rgb(4, 189, 251);
+    border-right: 1px solid black;
 }
 
 .addBtn:hover {
