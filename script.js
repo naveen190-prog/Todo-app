@@ -31,8 +31,8 @@ function renderTasks() {
                         <span class="todo" style="text-decoration: ${element.checked ? "line-through" : "none"}">${element.text}</span>
                 </div>
                 <div class="customBtns">
-                    <div class="edit"><img src="/Assets/edit.svg" alt=""></div>
-                    <div class="delete"><img src="/Assets/delete.svg" alt=""></div>
+                    <div class="edit"><img src="./Assets/edit.svg" alt=""></div>
+                    <div class="delete"><img src="./Assets/delete.svg" alt=""></div>
                 </div>
             </li>`;
         }
