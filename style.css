@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 157, 255, 0.205);
+    /* background-image: url("/Assets/ball-7280265.jpg"); */
+}
+
+.main {
+    height: 80vh;
+    width: 30vw;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Slight background for contrast */
+}
+
+.name {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.649);
+}
+
+.inputAndAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.input {
+    width: 86%;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 0px 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    /* Default border */
+}
+
+.input:focus {
+    outline: 2px solid rgba(0, 0, 255, 0.5);
+    /* Outline for focus instead of border */
+}
+
+.addBtn {
+    height: 40px;
+    padding: 10px 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(4, 189, 251);
+}
+
+.addBtn:hover {
+    background-color: rgba(4, 189, 251, 0.688);
+}
+
+.addBtn:focus {
+    outline: 2px solid rgba(0, 0, 255, 0.5);
+}
+
+.contentContainer {
+    width: 86%;
+    height: 58vh;
+    overflow-y: auto;
+}
+
+.contentContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+.contentContainer::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.contentContainer::-webkit-scrollbar-thumb {
+    background: rgba(4, 189, 251, 0.7);
+    border-radius: 4px;
+}
+
+.checkAndTodo {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    appearance: none;
+    border: 2px solid #333;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+input[type="checkbox"]:checked {
+    background-color: rgb(4, 189, 251);
+    /* Blue when checked */
+    border-color: rgb(4, 189, 251);
+    position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✔";
+    /* Checkmark */
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input[type="checkbox"]:focus {
+    outline: 2px solid rgba(0, 0, 255, 0.5);
+    /* Focus style */
+}
+
+.content {
+    margin: 10px 0px;
+    padding: 6px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff73;
+    border: 2px solid rgba(0, 0, 0, 0.195);
+}
+
+.todo {
+    font-weight: 500;
+    color: rgb(77, 77, 77);
+}
+
+.customBtns {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit,
+.delete {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.edit img,
+.delete img {
+    width: 100%;
+    /* Ensure SVGs fill the container */
+    height: 100%;
+}
+
+.edit:focus,
+.delete:focus {
+    outline: 2px solid rgba(0, 0, 255, 0.5);
+    /* Focus style */
+}
+
+@media only screen and (max-width: 900px) {
+    .main {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0px;
+    }
+
+    .contentContainer {
+        width: 100%;
+        /* Slightly wider for small screens */
+        height: 70vh;
+        /* Adjusted for better fit */
+    }
+
+    .input {
+        width: 80%;
+        /* Adjust input width */
+    }
+}
